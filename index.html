@@ -1,0 +1,1093 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<link rel="stylesheet" href="./input.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechSENAI | Inovação e Tecnologia Acessível</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        senai: {
+                            dark: '#061125',
+                            navy: '#0B1D3A',
+                            blue: '#0056B3',
+                            cyan: '#00D2FF',
+                            light: '#F4F7FB',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans text-slate-800 bg-senai-light antialiased selection:bg-senai-cyan selection:text-senai-dark">
+
+    <!-- ==================== CABEÇALHO ==================== -->
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-slate-800/80 transition-all duration-300">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logotipo -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-senai-blue to-senai-cyan flex items-center justify-center shadow-lg shadow-senai-cyan/20 group-hover:scale-105 transition-transform">
+
+                        <img src="img/SENAI_logo_2024.png" alt="Logo SENAI" class="w-10 h-10 object-contain">
+
+                    </div>
+
+                    <span class="text-2xl font-extrabold tracking-tight text-white">
+                        Tech<span class="text-senai-cyan">SENAI</span>
+                    </span>
+
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+
+                    <a href="#inicio" class="text-sm font-medium text-slate-300 hover:text-senai-cyan transition-colors py-2">Início</a>
+
+                    <a href="#produtos" class="text-sm font-medium text-slate-300 hover:text-senai-cyan transition-colors py-2">Produtos</a>
+
+                    <a href="#sobre" class="text-sm font-medium text-slate-300 hover:text-senai-cyan transition-colors py-2">Sobre Nós</a>
+
+                    <a href="#video" class="text-sm font-medium text-slate-300 hover:text-senai-cyan transition-colors py-2">Vídeo</a>
+
+                    <a href="#contato" class="text-sm font-medium text-slate-300 hover:text-senai-cyan transition-colors py-2">Contato</a>
+
+                    <a href="#contato" class="px-5 py-2.5 rounded-xl bg-senai-cyan text-senai-dark font-semibold text-sm hover:bg-white transition-all shadow-md shadow-senai-cyan/20">
+                        Falar com Consultor
+                    </a>
+
+                </nav>
+
+                <!-- Botão Menu Mobile -->
+                <div class="md:hidden">
+
+                    <button
+                        id="mobile-menu-btn"
+                        type="button"
+                        aria-label="Abrir menu"
+                        aria-expanded="false"
+                        class="p-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors"
+                    >
+
+                        <svg id="menu-icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+
+                        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-senai-navy border-b border-slate-800 px-4 pt-2 pb-6 space-y-2">
+
+            <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-senai-cyan">Início</a>
+
+            <a href="#produtos" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-senai-cyan">Produtos</a>
+
+            <a href="#sobre" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-senai-cyan">Sobre Nós</a>
+
+            <a href="#contato" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-senai-cyan">Contato</a>
+
+            <div class="pt-2">
+
+                <a href="#contato" class="mobile-nav-link block w-full text-center px-4 py-3 rounded-xl bg-senai-cyan text-senai-dark font-bold text-base">
+                    Solicitar Orçamento
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================== SEÇÃO INICIAL ==================== -->
+
+
+<section class="max-w-7xl mx-auto px-6 py-12">
+
+    <div class="banner-carousel">
+
+        <div class="banner-track" id="bannerTrack">
+
+            <!-- BANNER 1 -->
+            <div class="banner-slide">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600"
+                    alt="Equipe trabalhando com tecnologia"
+                >
+
+                <div class="banner-overlay"></div>
+
+                <div class="banner-content">
+                    <span class="text-cyan-400 font-bold uppercase tracking-widest text-sm">
+                        Tecnologia e inovação
+                    </span>
+
+                    <h2>
+                        O futuro começa com a
+                        <span class="highlight">tecnologia.</span>
+                    </h2>
+
+                    <p>
+                        Descubra soluções inovadoras e conheça as
+                        oportunidades que a tecnologia oferece para transformar o futuro.
+                    </p>
+
+                    <a href="#produtos" class="btn-primary">
+                        Conheça nossas soluções
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- BANNER 2 -->
+            <div class="banner-slide">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600"
+                    alt="Pessoa utilizando tecnologia em um notebook"
+                >
+
+                <div class="banner-overlay"></div>
+
+                <div class="banner-content">
+                    <span class="text-cyan-400 font-bold uppercase tracking-widest text-sm">
+                        Aprendizado e desenvolvimento
+                    </span>
+
+                    <h2>
+                        Conhecimento que
+                        <span class="highlight">transforma.</span>
+                    </h2>
+
+                    <p>
+                        Explore novas possibilidades, desenvolva habilidades
+                        e prepare-se para os desafios do mundo digital.
+                    </p>
+
+                    <a href="#sobre" class="btn-primary">
+                        Saiba mais
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SETAS -->
+        <button class="carousel-button carousel-prev"
+                id="bannerPrev"
+                aria-label="Banner anterior">
+            &#10094;
+        </button>
+
+        <button class="carousel-button carousel-next"
+                id="bannerNext"
+                aria-label="Próximo banner">
+            &#10095;
+        </button>
+
+        <!-- INDICADORES -->
+        <div class="carousel-indicators" id="bannerIndicators">
+            <button class="active" aria-label="Ir para banner 1"></button>
+            <button aria-label="Ir para banner 2"></button>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <section id="inicio" class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 bg-senai-dark tech-grid-bg overflow-hidden">
+
+        <!-- Efeitos decorativos -->
+        <div class="absolute top-20 left-1/4 w-96 h-96 bg-senai-blue/25 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-senai-cyan/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Texto principal -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-senai-navy border border-senai-cyan/30 text-senai-cyan text-xs sm:text-sm font-semibold mb-6">
+
+                        <span class="w-2 h-2 rounded-full bg-senai-cyan animate-pulse"></span>
+
+                        Tecnologia de Ponta com DNA de Inovação
+
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+
+                        O Futuro do Seu Setup Começa na
+
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-senai-cyan to-blue-400">
+                            TechSENAI
+                        </span>
+
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+
+                        Equipamentos de alta performance, workstations profissionais e periféricos selecionados para impulsionar seus estudos, projetos de engenharia, desenvolvimento e entretenimento.
+
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+
+                        <a href="#produtos" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-senai-blue to-senai-cyan text-white font-bold text-base shadow-lg shadow-senai-cyan/25 hover:opacity-95 hover:-translate-y-0.5 transition-all text-center">
+                            Explorar Catálogo
+                        </a>
+
+                        <a href="#sobre" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-senai-navy/80 border border-slate-700 text-slate-200 font-semibold text-base hover:border-senai-cyan/50 hover:text-white transition-all text-center">
+                            Conhecer Diferenciais
+                        </a>
+
+                    </div>
+
+                    <!-- Métricas -->
+                    <div class="grid grid-cols-3 gap-4 pt-10 mt-10 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-white">+5.000</p>
+                            <p class="text-xs sm:text-sm text-slate-400">Clientes Atendidos</p>
+                        </div>
+
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-senai-cyan">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-400">Garantia Oficial</p>
+                        </div>
+
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-white">24h</p>
+                            <p class="text-xs sm:text-sm text-slate-400">Suporte Técnico</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Ilustração -->
+                <div class="lg:col-span-5 flex justify-center">
+
+                    <div class="relative w-full max-w-md bg-gradient-to-b from-senai-navy to-senai-dark p-6 sm:p-8 rounded-3xl border border-slate-700/70 shadow-2xl">
+
+                        <div class="absolute -top-4 -right-3 sm:-right-4 bg-senai-cyan text-senai-dark font-bold text-xs px-4 py-2 rounded-xl shadow-lg">
+                            Lançamentos 2026
+                        </div>
+
+                        <svg viewBox="0 0 400 320" class="w-full h-auto drop-shadow-xl" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                            <circle cx="200" cy="160" r="120" fill="url(#heroGlow)" opacity="0.25"/>
+
+                            <rect x="65" y="55" width="270" height="155" rx="14" fill="#0F264A" stroke="#00D2FF" stroke-width="3"/>
+
+                            <rect x="78" y="68" width="244" height="125" rx="8" fill="#061125"/>
+
+                            <rect x="95" y="85" width="90" height="12" rx="6" fill="#00D2FF" opacity="0.85"/>
+
+                            <rect x="95" y="106" width="140" height="8" rx="4" fill="#334155"/>
+
+                            <rect x="95" y="122" width="115" height="8" rx="4" fill="#334155"/>
+
+                            <path d="M95 170 L135 148 L170 160 L215 130 L260 142 L302 105" stroke="#00D2FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <circle cx="215" cy="130" r="5" fill="#FFFFFF"/>
+
+                            <circle cx="302" cy="105" r="6" fill="#00D2FF"/>
+
+                            <path d="M180 210 L220 210 L232 242 L168 242 Z" fill="#1E3A6D"/>
+
+                            <rect x="140" y="242" width="120" height="8" rx="4" fill="#00D2FF"/>
+
+                            <rect x="95" y="264" width="170" height="22" rx="6" fill="#0F264A" stroke="#38BDF8" stroke-width="1.5"/>
+
+                            <line x1="108" y1="275" x2="252" y2="275" stroke="#00D2FF" stroke-width="2" stroke-dasharray="8 6"/>
+
+                            <rect x="282" y="262" width="26" height="26" rx="12" fill="#0F264A" stroke="#00D2FF" stroke-width="1.5"/>
+
+                            <line x1="295" y1="266" x2="295" y2="273" stroke="#00D2FF" stroke-width="2" stroke-linecap="round"/>
+
+                            <defs>
+                                <radialGradient id="heroGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 160) rotate(90) scale(120)">
+                                    <stop stop-color="#00D2FF"/>
+                                    <stop offset="1" stop-color="#061125" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+
+                        </svg>
+
+                        <div class="mt-4 flex items-center justify-between text-xs text-slate-300 bg-senai-dark/70 p-3.5 rounded-2xl border border-slate-800">
+
+                            <span class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                Pronta entrega para todo o Brasil
+                            </span>
+
+                            <span class="font-semibold text-senai-cyan">
+                                Consultoria Gratuita
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- ==================== SEÇÃO DE CARDS INFORMATIVOS (BENEFÍCIOS) ==================== -->
+    <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Entrega -->
+                <div class="flex items-start gap-5 p-6 rounded-2xl bg-senai-light border border-slate-200 hover:border-senai-cyan/60 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-senai-dark text-senai-cyan flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                        <!-- Ícone SVG de Caminhão / Entrega -->
+                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-senai-dark mb-1">Entrega Rápida e Segura</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Envio imediato para todo o Brasil com rastreamento em tempo real e embalagem reforçada anti-impacto.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Atendimento -->
+                <div class="flex items-start gap-5 p-6 rounded-2xl bg-senai-light border border-slate-200 hover:border-senai-cyan/60 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-senai-dark text-senai-cyan flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                        <!-- Ícone SVG de Suporte / Atendimento -->
+                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-senai-dark mb-1">Suporte Especializado</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Consultoria técnica gratuita com profissionais capacitados para ajudar na escolha ideal do seu setup.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Variedade -->
+                <div class="flex items-start gap-5 p-6 rounded-2xl bg-senai-light border border-slate-200 hover:border-senai-cyan/60 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-senai-dark text-senai-cyan flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                        <!-- Ícone SVG de Variedade / Cubos -->
+                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-senai-dark mb-1">Variedade Tecnológica</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Amplo catálogo com workstations, notebooks de alta performance, periféricos e acessórios de última geração.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+   <!-- ==================== PRODUTOS ==================== -->
+    <section id="produtos" class="py-20 lg:py-28 bg-senai-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-senai-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
+                    Catálogo Exclusivo
+                </span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-senai-dark">
+                    Soluções Tecnológicas em Destaque
+                </h2>
+                <p class="mt-4 text-slate-600 text-base sm:text-lg">
+                    Selecione o equipamento ideal para a sua necessidade. Clique em <strong>"Tenho Interesse"</strong> para preencher automaticamente sua solicitação de orçamento.
+                </p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" id="category-filters">
+                <button data-filter="todos" class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-semibold bg-senai-dark text-white shadow-sm transition-all">
+                    Todos os Produtos
+                </button>
+                <button data-filter="computadores" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    Notebooks & Monitores
+                </button>
+                <button data-filter="mobile" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    Smartphones & Wearables
+                </button>
+                <button data-filter="perifericos" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all">
+                    Periféricos & Áudio
+                </button>
+            </div>
+
+            <!-- Produtos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+
+                <!-- PRODUTO 1 -->
+                <article data-category="computadores" class="product-card bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-senai-cyan/60 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 bg-senai-dark overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-senai-dark/85 backdrop-blur-md text-senai-cyan border border-senai-cyan/40 text-xs font-semibold px-3 py-1 rounded-full">
+                            Workstation
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Notebook TechBook Pro 16 polegadas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-senai-dark group-hover:text-senai-blue transition-colors">
+                                Notebook TechBook Pro 16"
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Processador Intel Core i7 14ª Geração, 32GB RAM DDR5, SSD NVMe 1TB, Tela IPS 2.5K 120Hz e chassi em alumínio aeroespacial.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-100">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">À vista no PIX ou Boleto</span>
+                                    <span class="text-2xl font-extrabold text-senai-dark">R$ 6.499,00</span>
+                                </div>
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    Em estoque
+                                </span>
+                            </div>
+
+                            <button type="button" onclick="selecionarProduto('Notebook TechBook Pro 16&quot; - R$ 6.499,00')" class="w-full py-3.5 px-4 rounded-xl bg-senai-dark hover:bg-senai-blue text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm">
+                                <span>Tenho Interesse</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 2 -->
+                <article data-category="mobile" class="product-card bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-senai-cyan/60 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 bg-senai-dark overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-senai-dark/85 backdrop-blur-md text-blue-300 border border-blue-400/40 text-xs font-semibold px-3 py-1 rounded-full">
+                            5G Ultra
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="Smartphone SENAI Nova X5 5G" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-senai-dark group-hover:text-senai-blue transition-colors">
+                                Smartphone SENAI Nova X5 5G
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Tela AMOLED 6.7" 120Hz, 256GB de armazenamento, 12GB RAM, câmera tripla de 108MP com IA e carregamento turbo de 67W.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-100">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">À vista no PIX ou Boleto</span>
+                                    <span class="text-2xl font-extrabold text-senai-dark">R$ 2.890,00</span>
+                                </div>
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    Em estoque
+                                </span>
+                            </div>
+
+                            <button type="button" onclick="selecionarProduto('Smartphone SENAI Nova X5 5G - R$ 2.890,00')" class="w-full py-3.5 px-4 rounded-xl bg-senai-dark hover:bg-senai-blue text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm">
+                                <span>Tenho Interesse</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 3 -->
+                <article data-category="computadores" class="product-card bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-senai-cyan/60 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 bg-senai-dark overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-senai-dark/85 backdrop-blur-md text-senai-cyan border border-senai-cyan/40 text-xs font-semibold px-3 py-1 rounded-full">
+                            180Hz / 1ms
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80" alt="Monitor Curvo VisionTech 27 QHD" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-senai-dark group-hover:text-senai-blue transition-colors">
+                                Monitor Curvo VisionTech 27" QHD
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Resolução Quad HD (2560x1440), taxa de atualização de 180Hz, tempo de resposta 1ms, 99% sRGB e suporte ergonômico ajustável.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-100">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">À vista no PIX ou Boleto</span>
+                                    <span class="text-2xl font-extrabold text-senai-dark">R$ 1.749,90</span>
+                                </div>
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    Em estoque
+                                </span>
+                            </div>
+
+                            <button type="button" onclick="selecionarProduto('Monitor Curvo VisionTech 27&quot; QHD - R$ 1.749,90')" class="w-full py-3.5 px-4 rounded-xl bg-senai-dark hover:bg-senai-blue text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm">
+                                <span>Tenho Interesse</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 4 -->
+                <article data-category="perifericos" class="product-card bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-senai-cyan/60 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 bg-senai-dark overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-senai-dark/85 backdrop-blur-md text-indigo-300 border border-indigo-400/40 text-xs font-semibold px-3 py-1 rounded-full">
+                            Switch Mecânico
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80" alt="Combo Mecânico CyberKeys e Mouse Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-senai-dark group-hover:text-senai-blue transition-colors">
+                                Combo Mecânico CyberKeys + Mouse Pro
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Teclado compacto 75% com switches táteis hot-swappable, iluminação ciano/RGB e mouse ultraleve 62g com sensor óptico 26.000 DPI.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-100">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">À vista no PIX ou Boleto</span>
+                                    <span class="text-2xl font-extrabold text-senai-dark">R$ 549,00</span>
+                                </div>
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    Em estoque
+                                </span>
+                            </div>
+
+                            <button type="button" onclick="selecionarProduto('Combo Mecânico CyberKeys + Mouse Pro - R$ 549,00')" class="w-full py-3.5 px-4 rounded-xl bg-senai-dark hover:bg-senai-blue text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm">
+                                <span>Tenho Interesse</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 5 -->
+                <article data-category="perifericos" class="product-card bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-senai-cyan/60 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 bg-senai-dark overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-senai-dark/85 backdrop-blur-md text-senai-cyan border border-senai-cyan/40 text-xs font-semibold px-3 py-1 rounded-full">
+                            Cancelamento Ativo
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Headset Wireless PulseSound ANC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-senai-dark group-hover:text-senai-blue transition-colors">
+                                Headset Wireless PulseSound ANC
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Áudio espacial 7.1, cancelamento ativo de ruído híbrido, microfone com filtro de voz por IA, Bluetooth 5.3 + receptor USB-C sem atraso.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-100">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">À vista no PIX ou Boleto</span>
+                                    <span class="text-2xl font-extrabold text-senai-dark">R$ 689,00</span>
+                                </div>
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    Em estoque
+                                </span>
+                            </div>
+
+                            <button type="button" onclick="selecionarProduto('Headset Wireless PulseSound ANC - R$ 689,00')" class="w-full py-3.5 px-4 rounded-xl bg-senai-dark hover:bg-senai-blue text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm">
+                                <span>Tenho Interesse</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 6 -->
+                <article data-category="mobile" class="product-card bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-senai-cyan/60 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 bg-senai-dark overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-senai-dark/85 backdrop-blur-md text-emerald-300 border border-emerald-400/40 text-xs font-semibold px-3 py-1 rounded-full">
+                            Bateria 14 Dias
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Smartwatch ChronoTech Fit GPS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-senai-dark group-hover:text-senai-blue transition-colors">
+                                Smartwatch ChronoTech Fit GPS
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Caixa em titânio leve, GPS de dupla frequência integrado, monitoramento cardíaco e SpO2 24h, resistência à água 5ATM e tela sempre ativa.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-100">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">À vista no PIX ou Boleto</span>
+                                    <span class="text-2xl font-extrabold text-senai-dark">R$ 899,90</span>
+                                </div>
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    Em estoque
+                                </span>
+                            </div>
+
+                            <button type="button" onclick="selecionarProduto('Smartwatch ChronoTech Fit GPS - R$ 899,90')" class="w-full py-3.5 px-4 rounded-xl bg-senai-dark hover:bg-senai-blue text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm">
+                                <span>Tenho Interesse</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== SOBRE NÓS ==================== -->
+    <section id="sobre" class="py-20 lg:py-28 bg-white border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Texto -->
+                <div class="lg:col-span-6">
+                    <span class="text-senai-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
+                        Por que escolher a TechSENAI?
+                    </span>
+
+                    <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-senai-dark leading-tight">
+                        Excelência Técnica e Compromisso com o Seu Desempenho
+                    </h2>
+
+                    <p class="mt-4 text-slate-600 text-base leading-relaxed">
+                        Nascemos com a missão de democratizar o acesso a hardwares de alto desempenho com curadoria especializada. Cada produto do nosso catálogo passa por rigorosos testes de qualidade e compatibilidade.
+                    </p>
+
+                    <p class="mt-4 text-slate-600 text-base leading-relaxed">
+                        Seja para montar um laboratório de desenvolvimento, atualizar o computador de estudos ou equipar sua estação de trabalho, nossa equipe orienta você na escolha certa, sem complicações.
+                    </p>
+
+                    <div class="mt-8">
+                        <a href="#contato" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-senai-dark text-white font-semibold hover:bg-senai-blue transition-colors shadow-sm">
+                            <span>Fale com nossos especialistas</span>
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagem Relacionada -->
+                <div class="lg:col-span-6">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-senai-dark group">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Equipe e laboratório de tecnologia TechSENAI" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500">
+                        
+                        <div class="absolute bottom-4 left-4 right-4 bg-senai-dark/90 backdrop-blur-md p-4 rounded-2xl border border-senai-cyan/30 text-white">
+                            <p class="text-xs font-bold uppercase tracking-wider text-senai-cyan">Inovação & Curadoria</p>
+                            <p class="text-sm text-slate-200 mt-0.5">Equipamentos testados e aprovados por especialistas em tecnologia.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO DE VÍDEO ==================== -->
+    <section id="video" class="py-20 lg:py-28 bg-senai-dark tech-grid-bg text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-senai-cyan font-bold tracking-wider uppercase text-xs sm:text-sm">
+                    Tecnologia em Ação
+                </span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">
+                    Conheça o Futuro do Hardware e Inovação
+                </h2>
+                <p class="mt-4 text-slate-300 text-base sm:text-lg">
+                    Assista à demonstração das principais tendências em workstations, inteligência artificial e setups de alta performance.
+                </p>
+            </div>
+
+            <!-- Contêiner Responsivo do Iframe (Proporção 16:9) -->
+            <div class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border-2 border-senai-cyan/30 bg-senai-navy">
+                <iframe 
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Vídeo sobre Tecnologia e Inovação - TechSENAI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section id="contato" class="py-20 lg:py-28 bg-senai-dark tech-grid-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-senai-cyan font-bold tracking-wider uppercase text-xs sm:text-sm">
+                    Atendimento Direto
+                </span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">
+                    Solicite Seu Orçamento ou Tire Dúvidas
+                </h2>
+                <p class="mt-4 text-slate-300 text-base sm:text-lg">
+                    Preencha os dados abaixo e nossa equipe comercial retornará rapidamente com a melhor proposta para você.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+                <!-- Informações da loja -->
+                <div class="lg:col-span-5 bg-senai-navy/90 border border-slate-800 rounded-3xl p-8 text-white space-y-8 shadow-xl">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            Canais de Atendimento
+                        </h3>
+                        <p class="text-sm text-slate-400">
+                            Visite nosso showroom tecnológico ou entre em contato pelos canais oficiais da TechSENAI.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Endereço -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-senai-dark border border-senai-cyan/30 text-senai-cyan flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">
+                                    Endereço da Loja
+                                </h4>
+                                <p class="text-sm text-slate-300 mt-1">
+                                    Av. da Inovação Industrial, 1500 — Distrito Tecnológico, Bloco B
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Telefone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-senai-dark border border-senai-cyan/30 text-senai-cyan flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">
+                                    Telefone & WhatsApp
+                                </h4>
+                                <p class="text-sm text-slate-300 mt-1">
+                                    (32) 3721-0000 / (32) 99999-2026
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- E-mail -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-senai-dark border border-senai-cyan/30 text-senai-cyan flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">
+                                    E-mail Comercial
+                                </h4>
+                                <p class="text-sm text-slate-300 mt-1">
+                                    contato@techsenai.com.br
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Horário -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-senai-dark border border-senai-cyan/30 text-senai-cyan flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">
+                                    Horário de Funcionamento
+                                </h4>
+                                <p class="text-sm text-slate-300 mt-1">
+                                    Segunda a Sexta: 08h às 19h<br>
+                                    Sábado: 08h às 13h
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 shadow-2xl">
+                    
+                    <!-- Mensagem de confirmação -->
+                    <div id="form-feedback" class="hidden mb-6 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base text-emerald-950">
+                                    Solicitação Enviada com Sucesso!
+                                </h4>
+                                <p id="feedback-text" class="text-sm text-emerald-800 mt-1 leading-relaxed">Entraremos em contato em breve através do seu e-mail.</p>
+                                <button type="button" id="reset-form-btn" onclick="resetarFormulario()" class="mt-3 text-xs font-bold uppercase tracking-wider text-emerald-700 hover:text-emerald-950 underline">
+                                    Enviar outra mensagem
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" onsubmit="enviarFormulario(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <!-- Nome -->
+                            <div>
+                                <label for="nome" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                                    Nome Completo *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    required
+                                    placeholder="Ex: João Silva"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-senai-blue focus:border-transparent transition-all"
+                                >
+                            </div>
+
+                            <!-- E-mail -->
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                                    E-mail *
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="joao.silva@email.com"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-senai-blue focus:border-transparent transition-all"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Produto (ID 'produto' para integração com os cards) -->
+                        <div>
+                            <label for="produto" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                                Produto ou Assunto de Interesse *
+                            </label>
+                            <input
+                                type="text"
+                                id="produto"
+                                name="produto"
+                                required
+                                placeholder="Selecione um produto acima ou digite o que procura"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-senai-blue focus:border-transparent transition-all"
+                            >
+                            <p class="text-xs text-slate-500 mt-1">
+                                Dica: Clique em "Tenho Interesse" em qualquer produto do catálogo para preencher este campo automaticamente.
+                            </p>
+                        </div>
+
+                        <!-- Mensagem -->
+                        <div>
+                            <label for="mensagem" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                                Mensagem *
+                            </label>
+                            <textarea
+                                id="mensagem"
+                                name="mensagem"
+                                rows="4"
+                                required
+                                placeholder="Conte-nos mais sobre sua necessidade, quantidade desejada ou dúvidas técnicas..."
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-senai-blue focus:border-transparent transition-all resize-y"
+                            ></textarea>
+                        </div>
+
+                        <!-- Botão -->
+                        <button
+                            type="submit"
+                            class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-senai-dark via-senai-navy to-senai-blue hover:opacity-95 text-white font-bold text-base shadow-lg shadow-senai-blue/20 transition-all flex items-center justify-center gap-2"
+                        >
+                            <span>Enviar Solicitação de Orçamento</span>
+                            <svg class="w-5 h-5 text-senai-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCRIPT DE SUPORTE (INTERATIVIDADE DOS CARDS E FORMULÁRIO) ==================== -->
+    <script>
+        // Função acionada ao clicar em "Tenho Interesse" nos produtos
+        function selecionarProduto(produtoInfo) {
+            const inputProduto = document.getElementById('produto');
+            if (inputProduto) {
+                inputProduto.value = produtoInfo;
+            }
+            const contatoSecao = document.getElementById('contato');
+            if (contatoSecao) {
+                contatoSecao.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Função de envio do formulário
+        function enviarFormulario(event) {
+            event.preventDefault();
+            const feedbackBox = document.getElementById('form-feedback');
+            const contactForm = document.getElementById('contact-form');
+            
+            if (feedbackBox && contactForm) {
+                feedbackBox.classList.remove('hidden');
+                contactForm.reset();
+                feedbackBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Botão para resetar o feedback
+        function resetarFormulario() {
+            const feedbackBox = document.getElementById('form-feedback');
+            if (feedbackBox) {
+                feedbackBox.classList.add('hidden');
+            }
+        }
+    </script>
+
+
+    <!-- ==================== RODAPÉ (FOOTER) ==================== -->
+    <footer class="bg-senai-dark text-slate-400 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+                
+                <!-- Nome / Logo da Loja -->
+                <a href="#inicio" class="flex items-center gap-3 focus:outline-none">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-senai-blue to-senai-cyan flex items-center justify-center text-white shadow-md shadow-senai-cyan/20">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight text-white">
+                        Tech<span class="text-senai-cyan">SENAI</span>
+                    </span>
+                </a>
+
+                <!-- Links Internos -->
+                <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium">
+                    <a href="#inicio" class="hover:text-senai-cyan transition-colors">Início</a>
+                    <a href="#produtos" class="hover:text-senai-cyan transition-colors">Produtos</a>
+                    <a href="#sobre" class="hover:text-senai-cyan transition-colors">Sobre Nós</a>
+                    <a href="#video" class="hover:text-senai-cyan transition-colors">Vídeo</a>
+                    <a href="#contato" class="hover:text-senai-cyan transition-colors">Contato</a>
+                </nav>
+
+            </div>
+
+            <!-- Direitos Reservados e Ano -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs text-slate-500">
+                <p>&copy; 2026 TechSENAI. Todos os direitos reservados.</p>
+                <p>Desenvolvido com foco em inovação e tecnologia acessível.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript externo -->
+    <script src="script.js"></script>
+
+</body>
+</html>
